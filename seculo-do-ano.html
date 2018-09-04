@@ -1,0 +1,39 @@
+<!DOCTYPE hmtl>
+	<head>
+		<title>século do ano</title>
+	</head>
+
+	<body>
+		
+	</body>
+
+    <script type="text/javascript">
+        /*tarefa
+        
+        Dado um ano, retorne o século em que se encontra.
+        O primeiro século vai do ano 1 até e incluindo o ano 100.
+        O segundo - do ano 101 até e incluindo o ano 200, etc.
+        
+        Para year = 1905, a saída deve ser 
+        centuryFromYear(year) = 20;
+        Para year = 1700, a saída deve ser 
+        centuryFromYear(year) = 17
+
+        */
+        function centuryFromYear(year) {
+    
+            //Resto da divisão
+            let seculo = year % 100;
+
+            if(seculo == 0){
+                return year/100 ;
+            }else{
+                resultado =  year/100+1;
+                return Math.round(parseInt(resultado.toFixed(2)));
+            }
+        }
+        
+        console.log(centuryFromYear(1905));
+	</script>
+
+</html>

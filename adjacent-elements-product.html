@@ -1,0 +1,39 @@
+<!DOCTYPE hmtl>
+	<head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		
+	</body>
+
+    <script type="text/javascript">
+        /*tarefa
+        
+		Dada uma matriz de números inteiros, encontre o par de elementos adjacentes
+		que possui o maior produto e retorne esse produto.
+
+		Para inputArray = [3, 6, -2, -5, 7, 3], a saída deve ser 
+		adjacentElementsProduct(inputArray) = 21.
+		7e 3produzir o maior produto.
+
+        */
+        function adjacentElementsProduct(inputArray) {
+    		let valor = inputArray[0] * inputArray[1];
+
+		    for(var i = 0; i<= inputArray.length ; i++){
+		        
+		        let soma = inputArray[i] * inputArray[i+1];
+		        
+		        if(soma > valor){
+		        	valor = soma;
+		        }
+			}
+		    return valor;
+		}
+        
+        console.log(adjacentElementsProduct([3, 6, -2, -5, 7, 3]));
+	</script>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE hmtl>
+	<head>
+		<title>isluck</title>
+	</head>
+
+	<body>
+		
+	</body>
+
+    <script type="text/javascript">
+    
+        /*tarefa
+        Geralmente, os números dos tickets consistem em um número par de dígitos.
+        
+        Um número de bilhete é considerado sortudo se a soma da primeira metade dos dígitos for igual à soma do segundo semestre.
+
+        Dado um número de ticket n, determine se ele é sortudo ou não.
+
+        Exemplo
+
+        Para n = 1230, a saída deve ser 
+        isLucky(n) = true;
+        Para n = 239017, a saída deve ser 
+        isLucky(n) = false.
+        
+        */
+		
+		function isLucky(n) {
+            n = n.toString();
+            let dividindo = n.length / 2;
+            let PrimeiroValor = 0;
+            let segundoValor = 0;
+
+            n.substring(0,dividindo).split('').forEach(function(e){
+                PrimeiroValor +=parseInt(e);
+            });
+
+            n.substring(dividindo).split('').forEach(function(e){
+                segundoValor +=parseInt(e);
+            });
+
+            return PrimeiroValor == segundoValor;
+            
+        }
+
+        console.log(isLucky(1230));
+	</script>
+
+</html>

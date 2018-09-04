@@ -1,0 +1,48 @@
+<!DOCTYPE hmtl>
+	<head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+		<title>século do ano</title>
+	</head>
+
+	<body>
+		
+	</body>
+
+    <script type="text/javascript">
+        /*tarefa
+        
+		Ratiorg obtido statuesde diferentes tamanhos como um presente da 
+		
+		CodeMaster para o seu aniversário, cada estátua possuindo um tamanho de número inteiro não negativo. 
+		
+		Desde que ele gosta de fazer as coisas perfeitas, ele quer organizá-las do menor para o maior. 
+		
+		Para que cada estátua seja maior do que a anterior 1. 
+		
+		Ele pode precisar de algumas estátuas adicionais para conseguir isso. 
+		
+		Ajude-o a descobrir o número mínimo de estátuas adicionais necessárias.
+
+		Para statues = [6, 2, 3, 8], a saída deve ser 
+		
+		makeArrayConsecutive2(statues) = 3.
+
+		Ratiorg precisa estátuas de tamanhos 4, 5e 7.
+
+        */
+        function makeArrayConsecutive2(statues) {
+
+    		var max = Math.max(...statues),
+				min = Math.min(...statues);
+			
+			console.log(max);
+			console.log(min);
+
+			return max-min-statues.length+1;
+		}
+
+        
+        console.log(makeArrayConsecutive2([6, 2, 3, 8]));
+	</script>
+
+</html>

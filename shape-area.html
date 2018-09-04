@@ -1,0 +1,44 @@
+<!DOCTYPE hmtl>
+	<head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+		<title>século do ano</title>
+	</head>
+
+	<body>
+		
+	</body>
+
+    <script type="text/javascript">
+        /*tarefa
+        
+		Abaixo, vamos definir um npolígono de interesse. Sua tarefa é encontrar a área de um polígono para um dado n.
+
+		Um 1polígono interessante é apenas um quadrado com um lado de comprimento 1. Um npolígono ansioso é obtido 
+		
+		levando-se o n - 1polígono -interessante e os 1polígonos que os interessam ao seu lado, lado a lado. 
+		
+		Você pode ver os polígonos 1-, 2-, 3- e 4-interessantes na figura abaixo.
+
+		Para n = 2, a saída deve ser 
+		shapeArea(n) = 5;
+
+		Para n = 3, a saída deve ser 
+		shapeArea(n) = 13.
+
+        */
+        function shapeArea(n) {
+
+    	let area = 0;
+
+			if(n == 1){
+				return 1;
+			}else{
+				return ((n * 4) - 4) + shapeArea(n-1);
+			}
+		}
+
+        
+        console.log(shapeArea(2));
+	</script>
+
+</html>

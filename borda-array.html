@@ -1,0 +1,48 @@
+<!DOCTYPE hmtl>
+	<head>
+		<title>sum</title>
+	</head>
+
+	<body>
+		
+	</body>
+
+    <script type="text/javascript">
+        /*tarefa
+        Dada uma matriz retangular de caracteres, adicione uma borda de asteriscos ( *) a ela.
+
+        Exemplo
+
+        Para
+
+        picture = ["abc",
+                "ded"]
+        a saída deve ser
+
+        addBorder(picture) = ["*****",
+                            "*abc*",
+                            "*ded*",
+                            "*****"]
+        */
+        function addBorder(picture) {
+            let len = [];
+            picture = picture.map(e => {
+                e = e.split('');
+                e.unshift('*');
+                e.push('*');
+                len.push(e.join('').length);
+                return e.join('');
+            });
+
+
+            picture.unshift('*'.repeat(len[0]));
+            picture.push("*".repeat(len[0]));
+            return picture;
+            
+        }
+        
+
+        console.log(addBorder(['a']));
+	</script>
+
+</html>

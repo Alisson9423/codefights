@@ -1,0 +1,87 @@
+<!DOCTYPE hmtl>
+	<head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+		<title>século do ano</title>
+	</head>
+
+	<body>
+		
+	</body>
+
+    <script type="text/javascript">
+        /*tarefa
+        
+		Depois que ficaram famosos, os CodeBots decidiram mudar para um novo prédio e morar juntos.
+		
+		O edifício é representado por um retângulo matrixde salas. 
+		
+		Cada célula matrixcontém um inteiro que representa o preço da sala. 
+		
+		Alguns quartos são gratuitos (seu custo é 0), mas isso é provavelmente porque eles são assombrados, então todos os bots têm medo deles. 
+		
+		É por isso que qualquer sala que é gratuita ou está localizada em qualquer lugar abaixo de uma sala livre na mesma coluna não é considerada adequada para os robôs viverem.
+
+		Ajude os bots a calcular o preço total de todos os quartos que são adequados para eles.
+
+		Para
+
+		matrix = [[0, 1, 1, 2], 
+				[0, 5, 0, 0], 
+				[2, 0, 3, 3]]
+		a saída deve ser 
+		matrixElementsSum(matrix) = 9.
+
+		Aqui está a matriz de quartos com quartos inadequados marcados com 'x':
+
+		[[x, 1, 1, 2], 
+		[x, 5, x, x], 
+		[x, x, x, x]]
+		Assim, a resposta é 1 + 5 + 1 + 2 = 9.
+
+		Para
+		matrix = [[1, 1, 1, 0], 
+				[0, 5, 0, 1], 
+				[2, 1, 3, 10]]
+		a saída deve ser 
+		matrixElementsSum(matrix) = 9.
+
+		Aqui está a matriz de quartos com quartos inadequados marcados com 'x':
+
+		[[1, 1, 1, x], 
+		[x, 5, x, x], 
+		[x, 1, x, x]]
+		Observe que a sala livre na primeira linha torna a coluna completa imprópria para bots.
+
+		Assim, a resposta é 1 + 1 + 1 + 5 + 1 = 9.
+        */
+        function matrixElementsSum(matrix) {
+			
+			let total = 0;
+            let indexBanido = [];
+            
+            for(var linha = 0 ;linha<matrix.length ;linha++){
+                
+                
+                for(var coluna = 0; coluna <matrix[linha].length ;coluna++){
+                    
+                   if(matrix[linha][coluna] === 0){
+                    
+                    indexBanido.push(coluna);
+
+                   }else if(indexBanido.indexOf(coluna) === -1){
+                       total += matrix[linha][coluna];
+                   }
+                   
+                }
+
+                
+            }
+
+            return total;
+		}
+
+        
+        console.log(matrixElementsSum([[0,1,1,2],[0,5,0,0],[2,0,3,3]]));
+	</script>
+
+</html>

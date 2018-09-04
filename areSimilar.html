@@ -1,0 +1,65 @@
+<!DOCTYPE hmtl>
+	<head>
+		<title>sum</title>
+	</head>
+
+	<body>
+		
+	</body>
+
+    <script type="text/javascript">
+        /*tarefa
+        Dois arrays são chamados semelhantes se um pode ser obtido de outro, trocando no máximo um par de elementos em um dos arrays.
+
+        Dado dois arrays a e b verifique se eles são semelhantes .
+
+        Exemplo
+
+        Para a = [1, 2, 3]e b = [1, 2, 3], a saída deve ser 
+        areSimilar(a, b) = true.
+
+        Os arrays são iguais, não há necessidade de trocar nenhum elemento.
+
+        Para a = [1, 2, 3]e b = [2, 1, 3], a saída deve ser 
+        areSimilar(a, b) = true.
+
+        Podemos obter ba partir atrocando 2e 1no b.
+
+        Para a = [1, 2, 2]e b = [2, 1, 1], a saída deve ser 
+        areSimilar(a, b) = false.
+
+        Qualquer permuta de quaisquer dois elementos, quer em aou em bnão vai fazer ae biguais.
+            
+        */
+        function areSimilar(a, b) {
+            
+            let cont = 0;
+
+            r = a.every(function(e){
+                 
+                if(b.includes(e)){
+                    for(var i = 0; i<b.length; i++){
+                        if(b[i] == e){
+                            cont++;
+                        }
+                    }
+                    
+                    if(cont > 1){
+                        return false;
+                    }else{
+                        cont = 0;
+                        return true;
+                    }
+                }
+
+            });
+
+            return r;
+
+        }
+        
+
+        console.log(areSimilar([4, 6, 3],[3, 4, 6]));
+	</script>
+
+</html>

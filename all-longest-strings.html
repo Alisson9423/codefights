@@ -1,0 +1,50 @@
+<!DOCTYPE hmtl>
+	<head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+		<title>século do ano</title>
+	</head>
+
+	<body>
+		
+	</body>
+
+    <script type="text/javascript">
+        /*tarefa
+		Dado um array de strings, retorne outro array contendo todas as suas strings mais longas.
+		
+		Para inputArray = ["aba", "aa", "ad", "vcd", "aba"], a saída deve ser 
+		allLongestStrings(inputArray) = ["aba", "vcd", "aba"]
+		
+        */
+        function allLongestStrings(inputArray) {
+			let novoArray = [];
+			let tamanho = 0
+
+			inputArray.forEach(e => {
+				if(e.length > tamanho){
+				tamanho = e.length;
+				}
+			});
+
+			inputArray.forEach(function(e){
+
+				if(e.length >= tamanho){
+					novoArray.push(e)
+				}
+
+			});
+
+
+
+			return novoArray;
+		}
+
+        
+        console.log(allLongestStrings(["aba", 
+										"aa", 
+										"ad", 
+										"vcd", 
+										"aba"]));
+	</script>
+
+</html>

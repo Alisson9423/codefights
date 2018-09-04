@@ -1,0 +1,42 @@
+<!DOCTYPE hmtl>
+	<head>
+		<title>somando valores em array</title>
+	</head>
+
+	<body>
+		
+	</body>
+
+    <script type="text/javascript">
+    
+        /*terfa
+        
+        Dadas duas strings, encontre o número de caracteres comuns entre elas.
+
+        Exemplo
+
+        Para s1 = "aabcc"e s2 = "adcaa", a saída deve ser 
+        commonCharacterCount(s1, s2) = 3.
+
+        Strings têm 3caracteres comuns - 2"a" e 1"c".
+
+        */
+		
+		function commonCharacterCount(s1, s2) {
+            var a=s1.split(""),r=0
+            while (a.length){
+                var t=a.pop()
+                if(s2.includes(t)){
+                r++
+                s2=s2.replace(t,"")
+                }
+            }
+            return r
+            }
+
+        
+        commonCharacterCount("aabcc","adcaa");
+
+	</script>
+
+</html>

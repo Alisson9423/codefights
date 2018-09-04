@@ -1,0 +1,49 @@
+<!DOCTYPE hmtl>
+	<head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+		<title>século do ano</title>
+	</head>
+
+	<body>
+		
+	</body>
+
+    <script type="text/javascript">
+        /*tarefa
+        
+		Dada uma sequência de inteiros como uma matriz, determine se é possível obter uma sequência
+		
+		estritamente crescente removendo mais de um elemento da matriz.
+
+		Para sequence = [1, 3, 2, 1], a saída deve ser 
+
+		almostIncreasingSequence(sequence) = false.
+
+		Não há um elemento nessa matriz que possa ser removido para obter uma sequência estritamente crescente.
+
+		Para sequence = [1, 3, 2], a saída deve ser 
+		almostIncreasingSequence(sequence) = true.
+
+		Você pode remover 3da matriz para obter a sequência estritamente crescente [1, 2].
+		
+		Como alternativa, você pode remover 2para obter a seqüência estritamente crescente [1, 3].
+        */
+        function almostIncreasingSequence(sequence) {
+
+		let conta = 0;
+				for(let i = 0 ; i< sequence.length; i++){
+					if(sequence[i] <= sequence[i-1]){
+						conta++;
+						if(sequence[i] <= sequence[i-2] && sequence[i+1] <= sequence[i-1]){
+							return false;
+						}
+					}
+				}
+			return conta <= 1;
+		}
+
+        
+        console.log(almostIncreasingSequence([1, 3, 2, 1]));
+	</script>
+
+</html>

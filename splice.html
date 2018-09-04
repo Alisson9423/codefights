@@ -1,0 +1,34 @@
+<!DOCTYPE hmtl>
+	<head>
+		<title>splice</title>
+	</head>
+
+	<body>
+		
+	</body>
+
+    <script type="text/javascript">
+        function a (s){
+            if(s.includes('(')){
+                return a(reverse(s));
+            }else{
+                return s;
+            }
+        }
+
+        function reverse(s){
+            var regExp = /\(([^()]*)\)/i;
+            var subString = regExp.exec(s)[1];
+            subString = subString.split('').reverse().join('');
+            return s.replace(regExp,subString);
+        }
+
+
+        
+
+        //The ((quick (brown) (fox) jumps over the lazy) dog)
+        console.log(reverse('The ((quick (brown) (fox) jumps over the lazy) dog)'));
+        console.log(a('The ((quick (brown) (fox) jumps over the lazy) dog)'));
+	</script>
+
+</html>
